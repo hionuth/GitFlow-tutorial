@@ -1,0 +1,28 @@
+
+list branches:					git branch -a
+
+fetch changes from remote:		git fetch
+
+reset local branch from origin:	git reset --hard origin/my_branch
+
+refresh local branch:			git checkout my_branch
+								git pull
+
+create new branch:				git checkout <source branch>
+								git checkout -b feature/my_branch
+push your new branch to origin:	git push --set-upstream origin feature/my_branch
+
+status of changes:				git status
+stage changes:					git add .
+commit changes:					git commit -m "My commit description message"
+push comits to origin:			git push
+
+merge two branches:				git checkout destination_branch
+								git merge --no-ff source_branch
+
+solve merge conflicts:			git mergetool
+configure git mergetool:		git config --global merge.tool kdiff3
+								git config --global mergetool.kdiff3.path /Applications/kdiff3.app/Contents/MacOS/kdiff3
+
+delete branch locally:			git branch -d <my_branch>
+delete branch from remote:		git push origin -d <my_branch>
